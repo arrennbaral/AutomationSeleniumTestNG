@@ -23,22 +23,22 @@ public class BaseTest {
 	@BeforeTest
 	public void setUp() throws IOException {
 		if(driver == null) {
-			FileReader fr = new FileReader("/Users/arrennbaral/Desktop/Java-Selenium/Automation_Framework/TestAutomationFramework/src/test/resources/configfiles/config.properties");
+			FileReader fr = new FileReader(System.getProperty("user.dir")+ "/src/test/resources/configfiles/config.properties");
 			prop.load(fr);
 			
 		}
-		if(prop.getProperty("browser").equals("chrome")) {
+		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.get(prop.getProperty("testurl"));
 			driver.manage().window().maximize(); // move to base
-		}else if(prop.getProperty("browser").equals("firefox")) {
+		}else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.get(prop.getProperty("testurl"));
 			driver.manage().window().maximize(); // move to base
 			
-		}else if(prop.getProperty("browser").equals("safari")) {
+		}else if(prop.getProperty("browser").equalsIgnoreCase("safari")) {
 			WebDriverManager.safaridriver().setup();
 			driver = new SafariDriver();
 			driver.get(prop.getProperty("testurl"));
