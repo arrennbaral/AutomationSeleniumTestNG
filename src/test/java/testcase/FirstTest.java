@@ -11,9 +11,9 @@ public class FirstTest {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.zoho.com/");
-		driver.manage().window().maximize();
-		driver.findElement(By.className("zgh-login")).click();
+		driver.get("https://www.zoho.com/"); // move to base 
+		driver.manage().window().maximize(); // move to base
+		driver.findElement(By.className("zgh-login")).click(); //locators -- properties
 		driver.findElement(By.id("login_id")).sendKeys("arrennbaral@gmail.com");
 		driver.findElement(By.id("nextbtn")).click();
 		driver.findElement(By.id("password")).sendKeys("_________");
