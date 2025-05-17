@@ -17,14 +17,19 @@ public class BaseTest {
 	
 	public static WebDriver driver;
 	public static Properties prop = new Properties();
+	public static Properties loc = new Properties();
+	
 	public static FileReader fr;
+	public static FileReader fr_locators;
 	
 	
 	@BeforeTest
 	public void setUp() throws IOException {
 		if(driver == null) {
 			FileReader fr = new FileReader(System.getProperty("user.dir")+ "/src/test/resources/configfiles/config.properties");
+			FileReader fr_locators = new FileReader(System.getProperty("user.dir")+ "/src/test/resources/configfiles/locators.properties");
 			prop.load(fr);
+			loc.load(fr_locators);
 			
 		}
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
