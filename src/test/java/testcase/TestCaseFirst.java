@@ -1,5 +1,7 @@
 package testcase;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,7 +20,7 @@ public class TestCaseFirst extends BaseTest {
 		driver.findElement(By.id(loc.getProperty("password_field"))).click();
 
 		//System.out.println(driver.getTitle());
-		Assert.assertEquals(driver.getTitle(), "Zoho Accounts");
+		AssertJUnit.assertEquals(driver.getTitle(), "Zoho Accounts");
 	}
 
 }
