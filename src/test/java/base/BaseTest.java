@@ -39,7 +39,7 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.get(prop.getProperty("testurl"));
-			driver.manage().window().maximize(); // move to base
+			//driver.manage().window().maximize(); // move to base
 		}else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
