@@ -8,10 +8,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import utilities.ReadXLSData;
 
 public class TestCaseFirst extends BaseTest {
 	
-	@Test(dataProvider = "testdata")
+	@Test(dataProviderClass = ReadXLSData.class, dataProvider = "testdata")
 	public static void LoginTest(String username, String password) {
 		
 		driver.findElement(By.className(loc.getProperty("sign_in"))).click(); //locators -- properties
@@ -24,18 +25,18 @@ public class TestCaseFirst extends BaseTest {
 		AssertJUnit.assertEquals(driver.getTitle(), "Zoho Accounts");
 	}
 	
-	@DataProvider(name = "testdata")
-	public Object [][] testData(){
-		
-		return new Object [][] {
-			{"arrennbaral@gmail.com", "2kWip@HgY!S9gAL"},
-			{"arrenngmail.com", "===="},
-			{"arrennbaral@gmaom", "==="},
-			{"arrennbail.com", "=="},
-			{"arrennbil.com", "==="},
-		};
-		
-	}
+//	@DataProvider(name = "testdata")
+//	public Object [][] testData(){
+//		
+//		return new Object [][] {
+//			{"arrennbaral@gmail.com", "2kWip@HgY!S9gAL"},
+//			{"arrenngmail.com", "===="},
+//			{"arrennbaral@gmaom", "==="},
+//			{"arrennbail.com", "=="},
+//			{"arrennbil.com", "==="},
+//		};
+//		
+//	}
 	
 
 }

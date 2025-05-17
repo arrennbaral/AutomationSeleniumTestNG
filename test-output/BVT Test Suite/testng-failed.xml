@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="LoginTest" invocation-numbers="1 2 3 4"/>
+          <include name="LoginTest" invocation-numbers="1 2 3"/>
         </methods>
       </class> <!-- testcase.TestCaseFirst -->
     </classes>
