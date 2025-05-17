@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-BVT_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">BVT Test Suite</span>
+              <span class="suite-name border-failed">BVT Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 4 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BVT_Test_Suite" class="hide-methods failed suite-BVT_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-BVT_Test_Suite -->
+                      <a href="#" panel-name="suite-BVT_Test_Suite" class="show-methods failed suite-BVT_Test_Suite"> (show)</a> <!-- show-methods failed suite-BVT_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-BVT_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest(arrennbail.com, ==)">LoginTest(arrennbail.com, ==)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest(arrennbil.com, ===)">LoginTest(arrennbil.com, ===)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest(arrenngmail.com, ====)">LoginTest(arrenngmail.com, ====)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest(arrennbaral@gmaom, ===)">LoginTest(arrennbaral@gmaom, ===)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-BVT_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +132,7 @@
                     <div class="method-list-content passed suite-BVT_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-BVT_Test_Suite" title="testcase.TestCaseFirst" class="method navigator-link" hash-for-method="LoginTest(arrennbaral@gmail.com, 2kWip@HgY!S9gAL)">LoginTest(arrennbaral@gmail.com, 2kWip@HgY!S9gAL)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-BVT_Test_Suite -->
@@ -118,6 +147,134 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BVT_Test_Suite" class="panel BVT_Test_Suite">
+          <div class="suite-BVT_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcase.TestCaseFirst</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest(arrennbail.com, ==)">
+                  </a> <!-- LoginTest(arrennbail.com, ==) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">(arrennbail.com,==)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=136.0.7103.114)
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;11.0.9.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e4fe73d349ad1702c9bb449937a1ef87, sendKeysToElement {id=f.8FC332FB5723D75C4DBD5D62853B75CE.d.27DCD7690C0F208B3D6CE5847AECA0ED.e.92, value=[Ljava.lang.CharSequence;@45bf6f39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: /var/folders/z_/q5_dc_qx6wg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58522}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58522/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (e4fe73d349ad1702c9bb449937a1ef87)] -&gt; id: password]
+Session ID: e4fe73d349ad1702c9bb449937a1ef87
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testcase.TestCaseFirst.LoginTest(TestCaseFirst.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest(arrennbil.com, ===)">
+                  </a> <!-- LoginTest(arrennbil.com, ===) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">(arrennbil.com,===)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=136.0.7103.114)
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;11.0.9.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aca56f06eb25b8586fbdbfedf319a6f4, sendKeysToElement {id=f.2C75CFCB0430A99D77BEFB1805E21E0D.d.CBF1CC13F0127FA301E3C0615402992F.e.93, value=[Ljava.lang.CharSequence;@17d32e9b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: /var/folders/z_/q5_dc_qx6wg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58717}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58717/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (aca56f06eb25b8586fbdbfedf319a6f4)] -&gt; id: password]
+Session ID: aca56f06eb25b8586fbdbfedf319a6f4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testcase.TestCaseFirst.LoginTest(TestCaseFirst.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest(arrenngmail.com, ====)">
+                  </a> <!-- LoginTest(arrenngmail.com, ====) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">(arrenngmail.com,====)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=136.0.7103.114)
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;11.0.9.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ca85d1d8d13eefce8af08250dcc9fbfd, sendKeysToElement {id=f.92F9D164422CF7EBAD5FB9B3E657C252.d.3CA49724273E84C0D56FAF24CB217AF6.e.93, value=[Ljava.lang.CharSequence;@7c1812b3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: /var/folders/z_/q5_dc_qx6wg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58093}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58093/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (ca85d1d8d13eefce8af08250dcc9fbfd)] -&gt; id: password]
+Session ID: ca85d1d8d13eefce8af08250dcc9fbfd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testcase.TestCaseFirst.LoginTest(TestCaseFirst.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest(arrennbaral@gmaom, ===)">
+                  </a> <!-- LoginTest(arrennbaral@gmaom, ===) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">(arrennbaral@gmaom,===)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=136.0.7103.114)
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;11.0.9.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [042cd010eef8d0981bb2dceefe19350f, sendKeysToElement {id=f.4080662FEA628FFC9E97607E3ED48667.d.8AD8620FD5CC7BDAE95F4AA4EBDB135A.e.94, value=[Ljava.lang.CharSequence;@3ec2ecea}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: /var/folders/z_/q5_dc_qx6wg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58306}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58306/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (042cd010eef8d0981bb2dceefe19350f)] -&gt; id: password]
+Session ID: 042cd010eef8d0981bb2dceefe19350f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testcase.TestCaseFirst.LoginTest(TestCaseFirst.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BVT_Test_Suite-class-failed -->
           <div class="suite-BVT_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,9 +283,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginTest">
-                  </a> <!-- LoginTest -->
+                  <a name="LoginTest(arrennbaral@gmail.com, 2kWip@HgY!S9gAL)">
+                  </a> <!-- LoginTest(arrennbaral@gmail.com, 2kWip@HgY!S9gAL) -->
                   <span class="method-name">LoginTest</span>
+                  <span class="parameters">(arrennbaral@gmail.com,2kWip@HgY!S9gAL)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +343,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'testcase.TestCaseFirst')
-data.setCell(0, 3, 17250);
+data.setCell(0, 3, 16060);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'LoginTest')
+data.setCell(1, 2, 'testcase.TestCaseFirst')
+data.setCell(1, 3, 14608);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'LoginTest')
+data.setCell(2, 2, 'testcase.TestCaseFirst')
+data.setCell(2, 3, 14520);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'LoginTest')
+data.setCell(3, 2, 'testcase.TestCaseFirst')
+data.setCell(3, 3, 13720);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'LoginTest')
+data.setCell(4, 2, 'testcase.TestCaseFirst')
+data.setCell(4, 3, 12077);
 window.suiteTableData['BVT_Test_Suite']= { tableData: data, tableDiv: 'times-div-BVT_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-BVT_Test_Suite">
               </div> <!-- times-div-BVT_Test_Suite -->
             </div> <!-- times-div -->
@@ -227,21 +401,77 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">23667 ms</span>
+                <span class="method-start">22073 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest</span>
-                <span class="method-start">49065 ms</span>
+                <span class="method-name">LoginTest(arrennbaral@gmail.com, 2kWip@HgY!S9gAL)</span>
+                <span class="method-start">43690 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">66348 ms</span>
+                <span class="method-start">59765 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">59932 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginTest(arrenngmail.com, ====)</span>
+                <span class="method-start">80583 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">95132 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">95338 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginTest(arrennbaral@gmaom, ===)</span>
+                <span class="method-start">115966 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">129706 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">129959 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginTest(arrennbail.com, ==)</span>
+                <span class="method-start">149258 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">161352 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">161526 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginTest(arrennbil.com, ===)</span>
+                <span class="method-start">181981 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">196601 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">66616 ms</span>
+                <span class="method-start">196842 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
