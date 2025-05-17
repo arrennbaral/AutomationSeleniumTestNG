@@ -26,7 +26,7 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	@BeforeTest
+	
 	public void setUp() throws IOException {
 		if(driver == null) {
 			FileReader fr = new FileReader(System.getProperty("user.dir")+ "/src/test/resources/configfiles/config.properties");
@@ -55,7 +55,7 @@ public class BaseTest {
 		
 	}
 	@AfterMethod
-	@AfterTest
+	
 	public void tearDown() {
 		driver.close();
 		System.out.println("TearDown Succesful");
