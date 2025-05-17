@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
@@ -23,7 +24,9 @@ public class BaseTest {
 	
 	public static FileReader fr;
 	public static FileReader fr_locators;
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 	@BeforeMethod
 	
@@ -37,6 +40,8 @@ public class BaseTest {
 		}
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			//ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--headless");
 			driver = new ChromeDriver();
 			driver.get(prop.getProperty("testurl"));
 			//driver.manage().window().maximize(); // move to base

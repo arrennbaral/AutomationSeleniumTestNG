@@ -41,7 +41,7 @@ public class ReadXLSData {
 		for(int i=1;i<=totalRows;i++) {
 			for(int j = 0;j<totalCols;j++) {
 				testData[i-1][j] = format.formatCellValue(sheetName.getRow(i).getCell(j));
-				System.out.println(testData[i-1][j]);
+				//System.out.println(testData[i-1][j]);
 			}
 		}
 		

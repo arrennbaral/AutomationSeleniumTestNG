@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class ClickUtil {
 	public static void safeClick(WebDriver driver, By locator) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		
 		try {
 			WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
